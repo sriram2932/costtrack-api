@@ -1,4 +1,4 @@
-"""CostTrack API — working implementation.
+"""CostTrack API, working implementation.
 
 Implements the API described in the costtrack-api-docs repo: four endpoints
 for reading a priced bill of quantities, submitting a cost estimate as a
