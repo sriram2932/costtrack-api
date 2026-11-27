@@ -1,6 +1,6 @@
 # CostTrack API
 
-A working implementation of the CostTrack bill-of-quantities and cost-estimation API. This is the real thing: a running FastAPI service with the same four endpoints, the same data and the same error codes as the CostTrack API docs in the companion `costtrack-api-docs` repo.
+I built this to learn how a real cost API works, by writing one. It is a running FastAPI service for bills of quantities and cost estimation, with the same four endpoints, the same data and the same error codes as the CostTrack API docs in the companion [costtrack-api-docs](https://github.com/sriram2932/costtrack-api-docs) repo.
 
 CostTrack is a fictional product, built as a portfolio project. The API is real and runnable; the company behind it is not.
 
@@ -8,10 +8,10 @@ Written by Sriram Balasubramanian, Singapore. Quantity surveyor and AI training 
 
 ## What it does
 
-- `GET /projects/{project_id}/boq` — list a project's priced BOQ items, in bill order, with pagination and a trade filter
-- `GET /projects/{project_id}/boq/{item_no}` — get one BOQ item
-- `POST /projects/{project_id}/estimates` — submit a cost estimate, saved as a draft for review
-- `GET /projects/{project_id}/summary` — rolled-up project cost by trade, with the draft total shown separately
+- `GET /projects/{project_id}/boq`: list a project's priced BOQ items, in bill order, with pagination and a trade filter
+- `GET /projects/{project_id}/boq/{item_no}`: get one BOQ item
+- `POST /projects/{project_id}/estimates`: submit a cost estimate, saved as a draft for review
+- `GET /projects/{project_id}/summary`: rolled-up project cost by trade, with the draft total shown separately
 
 One project is seeded: `proj_01J8X`, 37 BOQ items across concrete, steel and finishes, live total SGD 1,842,500.00. The seed totals match the API reference exactly. Data is held in memory and resets when the server restarts.
 
